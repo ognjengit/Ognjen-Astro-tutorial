@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+const pageTitle = "My Astro Learning Blog";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -38,9 +39,13 @@ import Card from "../components/Card.astro";
     <a href="/about/">About</a>
     <a href="/blog/">Blog</a>
 
-    <h1>My Astro Learning Blog</h1>
+    <h1>{pageTitle}</h1>
     <p>This is where I will post about my journey learning Astro.</p>
-
+    <ul>
+      <li><a href="/posts/post-1/">Post 1</a></li>
+      <li><a href="/posts/post-2/">Post 2</a></li>
+      <li><a href="/posts/post-3/">Post 3</a></li>
+    </ul>
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
