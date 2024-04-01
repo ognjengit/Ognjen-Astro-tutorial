@@ -6,11 +6,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/footer.astro";
 import Hamburger from "../components/Hamburger.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "My Astro Learning Blog";
 ---
 
-<Layout title="Welcome to Astro.">
+<BaseLayout pageTitle={pageTitle}>
   <main>
     <Header />
 
@@ -19,14 +20,12 @@ const pageTitle = "My Astro Learning Blog";
     <ul>
       {
         allPosts.map((post) => (
-          <li>
-            <a href={post.url}>{post.frontmatter.title}</a>
-          </li>
+          <BlogPost url={post.url} title={post.frontmatter.title} />
         ))
       }
     </ul>
   </main>
-</Layout>
+</BaseLayout>
 
 <script>
   import "../scripts/menu.js";
