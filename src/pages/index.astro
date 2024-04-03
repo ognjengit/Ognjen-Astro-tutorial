@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MarkdownPostLayout from "../layouts/MarkdownPostLayout.astro";
+import Greetings from "../components/Greetings";
 
 const pageTitle = "Home Page";
 const pageTitle2 = "Something else";
@@ -8,7 +9,9 @@ const pageTitle2 = "Something else";
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
-</BaseLayout>
-<!-- <MarkdownPostLayout
+  <Greetings client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+
+  <!-- <MarkdownPostLayout
   frontmatter={{ title: pageTitle2, pubDate: new Date(), image: {} }}
 > -->
+</BaseLayout>
