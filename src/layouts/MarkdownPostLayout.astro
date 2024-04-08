@@ -11,11 +11,13 @@ const { frontmatter } = Astro.props;
 
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
 
-  <div class="tags">
+  <div class="flex flex-wrap">
     {
       frontmatter.tags.map((tag) => (
         <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a class="text-sky-700" href={`/tags/${tag}`}>
+            {tag}
+          </a>
         </p>
       ))
     }
@@ -24,10 +26,6 @@ const { frontmatter } = Astro.props;
   <slot />
 </BaseLayout>
 <style>
-  a {
-    color: #00539f;
-  }
-
   .tags {
     display: flex;
     flex-wrap: wrap;

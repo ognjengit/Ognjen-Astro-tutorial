@@ -43,7 +43,7 @@ const textCase = "uppercase";
       back and see how my journey is going!
     </p>
 
-    <p>Here are a few facts about me:</p>
+    <p class="mt-6">Here are a few facts about me:</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
       <li>
@@ -58,11 +58,11 @@ const textCase = "uppercase";
         )
       }
     </ul>
-    <p>My skills are:</p>
+    <p class="mt-6">My skills are:</p>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
+    {happy && <p class="mt-6">I am happy to be learning Astro!</p>}
 
     {finished && <p>I finished this tutorial!</p>}
 
